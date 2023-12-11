@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+:root{
+    /*Palette*/
+   --primary-solid:#FF3333;
+   --primary-900:rgb(255, 51, 51,0.9); 
+   --primary-500:rgb(255, 51, 51,0.5);
+   --primary-300:rgb(255, 51, 51,0.3);
+   
+   --secondary-solid:#1D84B5;
+   --secondary-900:rgb(29, 132, 181,0.9);
+   --secondary-500:rgb(29, 132, 181,0.5);
+   --secondary-300:rgb(29, 132, 181,0.3);
+
+   --dark-solid:#1F1F1F;
+   --dark-900:rgb(31, 31, 31,0.9);
+   --dark-500:rgb(31, 31, 31,0.5);
+   --dark-300:rgb(31, 31, 31,0.3);
+
+   --dark-bg-solid:#30343F;
+   --light-bg-solid:#FAFAFF;
+   --light-font-solid:#FFFFFF;
+
+   /*Tipography*/
+    --base-font:'Inter', sans-serif;
+    --alternative-font:'Raleway', sans-serif;
+
+    /*font-sizes*/
+    --font-display:4.6em;
+    --font-jumbo:3.8em;
+    --font-xlarge:3em;
+    --font-large:2.4em;
+    --font-medium:1.8em;
+    --font-small:1.6em;
+    --font-xsmall:1.4em;
+
+    /*Spacing*/
+    --spacing-128:12.8rem;
+    --spacing-68:6.8rem;
+    --spacing-36:3.6rem;
+    --spacing-28:2.8rem;
+    --spacing-24:2.4rem;
+    --spacing-20:2rem;
+    --spacing-16:1.6rem;
+    --spacing-12:1.2rem;
+    --spacing-8:0.8rem;
+
+   }
+
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/*General*/
+html{
+    font-size: 62.5%; /*por defecto los nvegadores usan 16px*/
+    /*Qui queda la fuente en 10px = 62.5%*/
+    color: var(--dark-solid);
+    font-family: var(--base-font);
+}
+
+a{
+    text-decoration: none;
+    color:inherit; /*Color heredado*/
+    color: inherit;
+}
+header,
+footer{
+    color:var(--light-font-solid);
+    font-family: var(--alternative-font);
+    
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+ul, ol{
+    list-style-type: none;
+}
+
+img{
+    width: 100%;
+}
+
+input {
+    writing-mode: horizontal-tb !important;
+}
+
+/*HEADER*/
+header{
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.navbar__logo{
+    max-width: 300px;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-20);
+}
+
+.navbar__link{
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: background .3s ease-in-out;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.navbar__link:hover{
+   background-color: var(--primary-solid); 
+}
+
+.whith-icon{
+    display: flex;
+    align-items: center; 
+    gap: var(--spacing-8);
+ }
+
+ .with-submenu:hover .submenu{
+    display: block;
+ }
+
+ .submenu{
+    display: none;
+    width: 300px;
+    position: absolute;
+    background-color: var(--dark-bg-solid);
+    z-index: 3;
+ }
+
+ .submenu__link{
+    display: block;
+    padding: var(--spacing-8) var(--spacing-16);
+    font-size: var(--font-medium);
+ }
+ .submenu__link:hover{
+    background-color: var(--primary-solid);
+ }
+
+ /*FOOTER*/
+
+.footer{
+    background-color: var(--dark-bg-solid);
+    padding:var(--spacing-68) ;
+ }
+ 
+ .footer__copy{
+    margin-top: var(--spacing-36);
+    text-align: center;
+    font-size: var(--font-small);
+ }
+ 
+/*pag ADMIN*/
+ /* Buscador*/
+ /* titulo del listado*/
+ .admin_find_content{
+    display: flex;
+    margin: 20px 0 20px 0;
+ }
+
+ .admin_find_search{
+    max-width: 30px;
+ }
+
+ .admin_title_content{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .admin_title_title{
+    font-size: var( --font-large);
+ }
+
+ .admin_title_create{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+
+ .admin_title_add{
+    margin-right:var(--spacing-8);
+    font-weight: bold;
+    font-size: var(--font-small);
+ }
+
+ .admin_title_button{
+    width: 25px;
+    height: 25px;
+    background:var(--primary-solid);
+    color: var(--light-bg-solid);
+    font-size: var(--font-large);
+    border:var(--primary-solid);
+    border-radius: 5px;
+ }
+ /* tabla de productos*/
+.admin_list_content{
+    margin: var(--spacing-8);
+    
+ }
+
+.admin_list_table{
+    width: auto;
+    display: flex;
+    justify-content:flex-start;
+    font-size: var(--font-medium);
+    margin: var(--spacing-12);
+    text-align: center;
+}
+
+.admin_list_col_head{
+    padding:5px 50px 20px 55px;   
+}
+
+.admin_list_col_data{
+    padding: 2px;
+}
+
+.ico-accion{
+    max-width: 30px;
+}
+
+/*pag LOGIN*/
+.login{
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.login_title{
+    font-size: var(--font-jumbo);
+    margin: var(--spacing-8);
+}
+
+.login_form{
+    display: flex;
+    justify-content: center;
+    margin: var(--spacing-20);
+}
+.login_form-group{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: var(--font-medium);
+}
+.login_form-group label{
+    flex: 1;
+    text-align: left;
+}
+
+form{
+    width: 390px;
+}
+
+.login_form-group input{
+    width: 200px;
+    border: none;
+    border-bottom: 3px solid var(--primary-900);
+}
+
+
+/*fORMULARIO*/
+.login_btnIngresar
+{
+    background-color: var(--primary-solid);
+    width: 110px;
+    height: 30px;
+    color: var(--light-bg-solid);
+    border: none;
+    font-weight: var(--font-xlarge);
+    border-right: var(--spacing-20);
+}
+
+
+/*Recordar contraseña*/
+
+.login_check{
+    width: 60px;
+    border: 2px solid var(--dark-solid);
+}
+
+.login_checkTitle{
+    color: #1F1F1F;
+    font-size: var(--font-xsmall);
+    /* padding: var(--spacing-8); */
+}
+    
+
+.login_olvideContrasena{
+    padding: var(--spacing-12);
+    color: #1D84B5;
+    font-size: var(--font-xsmall);
+}
+
+.login_subtitle{
+    font-family: var(--alternative-font);
+    font-size: var(--font-large);
+    margin: var(--spacing-28);
+}
+
+.login_checkTitle a{
+    color: var(--secondary-solid);
+}
+
+/*pag ACREATE*/
+/*TITULO*/
+.create_title{
+    margin: 20px;
+    font-size: var(--font-jumbo);
+}
+
+/*CREAR NUEVO ITEM*/
+/*CONTENEDOR DEL FORMULARIO*/
+.create_content{
+    display:flex ;
+    flex-direction: column; 
+ }
+ 
+ /*FORMULARIO*/
+ .create_cat_lic_content,
+ .create_product_form,
+ .create_inventario_content,
+ .create_product_desc_content,
+ .cpui,
+ .create_product_boton_content
+ {
+     display: flex;
+     justify-content:first baseline;
+     font-size: var(--font-medium);
+ }
+
+ .cat_label,
+ .cat_select,
+ .lic_label,
+ .product_label,
+ .desc_label,
+ .imagenes_label,
+ .inventario_sku_input,
+ .desc_cuotas_label,
+ .pii
+ {
+    margin-right:var(--spacing-12)
+}
+
+select{
+    width:auto;
+    height: 28px;
+    border: 2px solid var(--dark-500);
+    border-radius: 5px;
+}
+
+textarea{
+    width: 530px;
+}
+ 
+.create_product_form,
+.create_product_description_content,
+.create_inventario_content,
+.create_product_desc_content,
+.create_product_boton_content
+{
+     margin:2% 0%;    
+}
+
+.pii
+{
+    border:none;
+    border-bottom:3px solid var(--primary-solid);
+    text-align: center;
+    font-size:smaller ;
+}
+
+.sku{
+    width: 90px
+}
+.precio{
+    width: 80px
+}
+
+.stock{
+    width: 30px;
+}
+
+.descuento{
+    width: 30px;
+}
+
+.product_btn_agregar,
+.product_btn_limpiar{
+    background-color: #FF3333;
+    color: #FAFAFF;
+    width: 160px;
+    height: 40px;
+    border: none;
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+/*Edit page*/
+.edit_image_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    margin: var(--spacing-12);
+}
+
+.content_front,
+.content_back{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-bottom: 1px solid red;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: var(--font-medium);
+}
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <title>Funkoshop | Admin</title>
+</head>
+<body>
+    <header><!-- inicio header -->
+        <nav class="navbar container">
+          <picture class="navbar__logo">
+            <a href="/index.html">
+              <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca FunkoShop">
+            </a>
+          </picture>
+          <ul class="navbar__menu">
+            <li class="navbar__item with-submenu">
+              <a class="navbar__link whith-icon" href="../shop/Shop.html">VER TIENDA</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="./admin.html">ADMIN</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/index.html">SALIR</a>
+            </li>
+          </ul>
+        </nav>
+    </header><!-- fin header -->
+    <main class="container">
+        <seection class="admin_find_content"> <!--Buscador -->
+          <img class="admin_find_search" src="../../img/icons/search_icon.svg" alt="">
+            <input class="admin_find_input" type="text">
+        </seection>
+        <section class="admin_title_content"> <!--TITULO DEL LISTADO-->
+            <h3 class="admin_title_title">LISTADO DE PRODUCTOS</h3>
+            <div class="admin_title_create">
+              <p class="admin_title_add">AGREGAR</p>
+              <a href="../admin/create.html">
+                <button class="admin_title_button">+</button>
+              </a>
+            </div>
+        </section>
+        <section class="admin_list_content"> <!--TABLA DE PRODUCTOS-->
+            <table class="admin_list_table">
+                <tr class="admin_list_head">
+                    <th class="admin_list_col_head alch-Id">Id</th>
+                    <th class="admin_list_col_head alch-Code">Código</th>
+                    <th class="admin_list_col_head alch-Name">Nombre del Producto</th>
+                    <th class="admin_list_col_head alch-Category">Categoría</th>
+                    <th class="admin_list_col_head alch-actions"></th>
+                </tr>
+                <tr>
+                    <td class="admin_list_col_data">1</td>
+                    <td class="admin_list_col_data">STW001001</td>
+                    <td class="admin_list_col_data">Baby Yoda BLueball</td>
+                    <td class="admin_list_col_data">STAR WARS</td>
+                    <td class="admin_list_col_data ">
+                      <a href="./edit.html"><img class="ico-accion" src="../../img/icons/edit_pencil.svg" alt=""></a>
+                      <a href="#"><img class="ico-accion" src="../../img/icons/delete_trash.svg" alt=""></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="admin_list_col_data">2</td>
+                    <td class="admin_list_col_data">STW001002</td>
+                    <td class="admin_list_col_data">Baby Yoda BLueball</td>
+                    <td class="admin_list_col_data">STAR WARS</td>
+                    <td class="admin_list_col_data ">
+                      <a href="./edit.html"><img class="ico-accion" src="../../img/icons/edit_pencil.svg" alt=""></a>
+                      <a href="#"><img class="ico-accion" src="../../img/icons/delete_trash.svg" alt=""></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="admin_list_col_data">3</td>
+                    <td class="admin_list_col_data">STW001003</td>
+                    <td class="admin_list_col_data">Baby Yoda BLueball</td>
+                    <td class="admin_list_col_data">STAR WARS</td>
+                    <td class="admin_list_col_data ">
+                      <a href="./edit.html"><img class="ico-accion" src="../../img/icons/edit_pencil.svg" alt=""></a>
+                      <a href="#"><img class="ico-accion" src="../../img/icons/delete_trash.svg" alt=""></a>
+                    </td>
+                </tr>
+                <tr>
+                  <td class="admin_list_col_data">1</td>
+                  <td class="admin_list_col_data">STW001001</td>
+                  <td class="admin_list_col_data">Baby Yoda BLueball</td>
+                  <td class="admin_list_col_data">STAR WARS</td>
+                  <td class="admin_list_col_data ">
+                    <a href="./edit.html"><img class="ico-accion" src="../../img/icons/edit_pencil.svg" alt=""></a>
+                    <a href="#"><img class="ico-accion" src="../../img/icons/delete_trash.svg" alt=""></a>
+                  </td>
+              </tr>
+            </tr>
+            <tr>
+                <td class="admin_list_col_data">2</td>
+                <td class="admin_list_col_data">STW001002</td>
+                <td class="admin_list_col_data">Baby Yoda BLueball</td>
+                <td class="admin_list_col_data">STAR WARS</td>
+                <td class="admin_list_col_data ">
+                  <a href="./edit.html"><img class="ico-accion" src="../../img/icons/edit_pencil.svg" alt=""></a>
+                  <a href="#"><img class="ico-accion" src="../../img/icons/delete_trash.svg" alt=""></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="admin_list_col_data">3</td>
+                <td class="admin_list_col_data">STW001003</td>
+                <td class="admin_list_col_data">Baby Yoda BLueball</td>
+                <td class="admin_list_col_data">STAR WARS</td>
+                <td class="admin_list_col_data ">
+                  <a href="./edit.html"><img class="ico-accion" src="../../img/icons/edit_pencil.svg" alt=""></a>
+                  <a href="#"><img class="ico-accion" src="../../img/icons/delete_trash.svg" alt=""></a>
+                </td>
+            </tr>
+            <tr>
+              <td class="admin_list_col_data">1</td>
+              <td class="admin_list_col_data">STW001001</td>
+              <td class="admin_list_col_data">Baby Yoda BLueball</td>
+              <td class="admin_list_col_data">STAR WARS</td>
+              <td class="admin_list_col_data ">
+                <a href="./edit.html"><img class="ico-accion" src="../../img/icons/edit_pencil.svg" alt=""></a>
+                <a href="#"><img class="ico-accion" src="../../img/icons/delete_trash.svg" alt=""></a>
+              </td>
+          </tr>
+            </table>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="navbar container">
+          <ul class="navbar__item">
+            <li class="navbar__item">
+              <a class="navbar__link" href="../shop/Shop.html">SHOP</a></li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="./register.html">REGISTRARSE</a></li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="./Login.html">LOGIN</a></li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="../shop/Contacto.html">CONTACTO</a></li>
+          </ul>
+          <picture>
+            <img src="../../img/branding/isotype.svg" alt="Isotipo de la marca FunkoShop">
+          </picture>
+        </nav>
+      <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+</html>

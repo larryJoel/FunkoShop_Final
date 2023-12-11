@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <title>Funkoshop | Edit</title>
+</head>
+<body>
+    <header><!-- inicio header -->
+        <nav class="navbar container">
+          <picture class="navbar__logo">
+            <a href="/index.html">
+              <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca FunkoShop">
+            </a>
+          </picture>
+          <ul class="navbar__menu">
+            <li class="navbar__item with-submenu">
+              <a class="navbar__link whith-icon" href="../shop/Shop.html">VER TIENDA</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="./admin.html">ADMIN</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/index.html">SALIR</a>
+            </li>
+          </ul>
+        </nav>
+    </header><!-- fin header -->
+    <main class="container create_content">
+      <h1 class="create_title">EDITAR ITEM</h1>
+      <form action="">
+        <section class="create_content">
+          <article class="create_cat_lic_content">
+            <div class="cat_label">
+              <label for="">Categoria</label>
+            </div>
+            <div class ="cat_select">
+              <select name="select">
+                <option value="value1"selected>Selccione una opción...</option>
+                <option value="value2">Value 2</option>
+                <option value="value3">Value 3</option>
+              </select>
+            </div>
+            <div class="lic_label">
+              <label  for="">Licencia</label>
+            </div>
+            <div class="lic_select">
+              <select name="select">
+                <option value="value1" selected>Seleccione una opción...</option>
+                <option value="value2">Value 2</option>
+                <option value="value3">Value 3</option>
+              </select>
+            </div>
+          </article>
+          <article class="create_product_form">
+            <div class="product_label">
+              <label for="">Nombre del producto</label>
+            </div>
+            <div class="product_input">
+              <input class="pii" type="text">
+            </div>
+          </article>
+          <article class="create_product_description_content">
+            <div class="create_product_textarea">
+              <textarea name="" id="" cols="30" rows="10" placeholder="Descripción del producto"></textarea>
+            </div>
+          </article>
+          <article class="create_inventario_content">
+            <div class="inventario_sku_label">
+              <label for="">SKU:</label>
+            </div>
+            <div class="inventario_sku_input"> 
+              <input class="pii sku" type="text" placeholder="SSK111AB001">
+            </div>
+            <div class="inventario_precio_label">
+              <label for="">Precio:</label>
+            </div>
+            <div class="inventario_precio_input">
+              <input class="pii precio" type="text" placeholder="$0.000,00">
+            </div>
+            <div class="inventario_stock_label">
+              <label for="">Stock</label>
+            </div>
+            <div class="inventario_stock_input">
+              <input class="pii stock" type="text" placeholder="0">
+            </div>
+          </article>
+          <article class="create_product_desc_content">
+            <div class="desc_label">
+              <label for="">Descuento:</label>
+            </div>
+            <div class="desc_input">
+              <input class="pii descuento" type="text" placeholder="0%">
+            </div>
+            <div class="desc_cuotas_label">
+              <label for="">cuotas</label>
+            </div>
+            <div class="desc_cuotas_select">
+              <select name="select">
+                <option value="value1"selected>Selecciona una opción....</option>
+                <option value="value2">01 cuota</option>
+                <option value="value3">02 cuota</option>
+                <option value="value3">03 cuota</option>
+              </select>
+          </article>
+          <article class="create_product_imagenes_content">
+            <div class="cpui">
+              <p class="imagenes_label">imagenes</p>
+              <input class="imagenes_input_file" type="file">
+            </div>
+          </article >
+          <article class="edit_image_content">
+            <dir class="content_front">
+              <div><img src="../../img/star-wars/luke-1.webp" alt=""></div>
+              <div>Frente</div>
+            </dir>
+            <dir class="content_back">
+              <div>
+                <img src="../../img/star-wars/luke-box.webp" alt="">
+              </div>
+              <div>Dorso</div>
+            </dir>
+          </article>
+          <article class="create_product_boton_content">
+            <button class="product_btn_agregar">Editar producto</button>
+          </article >
+        </section>
+      </form>
+    </main>
+    <footer class="footer">
+        <nav class="navbar container">
+          <ul class="navbar__item">
+            <li class="navbar__item">
+              <a class="navbar__link" href="../shop/Shop.html">SHOP</a></li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="../admin/register.html">REGISTRARSE</a></li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="../admin/Login.html">LOGIN</a></li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="../shop/Contacto.html">CONTACTO</a></li>
+          </ul>
+          <picture>
+            <img src="../../img/branding/isotype.svg" alt="Isotipo de la marca FunkoShop">
+          </picture>
+        </nav>
+      <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+</body>
+</html>
