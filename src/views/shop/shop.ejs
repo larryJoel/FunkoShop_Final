@@ -1,0 +1,93 @@
+
+<!-- allProducts.ejs -->
+<%- include('../partials/header') %>
+<main class="container shop">
+    <aside>
+        <form action="" class="shop-aside">
+          <div class="shop-aside__container">
+            <p class="shop-aside__container_title">BUSCAR</p>
+            <input class="aside__input" type="text">
+          </div>
+          <div class="shop-aside__container">
+              <p class="shop-aside__container_title">ORDENAR POR</p>
+              <select class="aside__input" name="select">
+                <option value="value1">Value 1</option>
+                <option value="value2" selected>Value 2</option>
+                <option value="value3">Value 3</option>
+              </select>
+          </div>
+          <div class="shop-aside__container">
+              <p class="shop-aside__container_title">PRECIO</p>
+              <div class="shop-aside__container_price">
+                <p>MIN</p>
+                <input class="aside__input_price" type="number">
+                <p>-</p>
+                <p>MAX</p>
+                <input class="aside__input_price" type="number">
+              </div>
+          </div>
+          <div>
+            <p class="shop-aside__container_title">FILTRAR</p>
+            <div class="checkbox-caja">
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1" class="checkbox-label"> NUEVOS</label>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1" class="checkbox-label"> OFERTAS</label>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1" class="checkbox-label"> EDICION ESPECIAL</label>
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1" class="checkbox-label"> FAVORITOS</label>
+              </div>
+            </div>
+        </form>
+    </aside>
+    <% if (productos && productos.length > 0) { %>
+        <section class="slider_shop container">
+            <ul class="contenedor_cajita">
+                <% productos.forEach((producto) => { %>
+                    <li class="cajita">
+                        <article class="card_item">
+                            <a class="card-item__link" href="/detail/<%= producto.product_id %>">
+                                <picture class="card-item__cover">
+                                    <!-- Agrega lógica para mostrar la etiqueta "NUEVO" si el producto es nuevo -->
+                                    <span class="card-item__tag">NUEVO</span>
+                                    <img class="card-item__img--front" src="./img/<%= producto.image_front %>" alt="<%= producto.name %>">
+                                    <img class="card-item__img--back" src="./img/<%= producto.image_back %>" alt="<%= producto.name %>">
+                                </picture>
+                                <div class="card-item__content">
+                                    <p class="card-item__licence"><%= producto.product_name %></p>
+                                    <h4 class="card-item__name"><%= producto.product_description %></h4>
+                                    <p class="card-item__price">$ <%= producto.price %></p>
+                                    <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
+                                    <% if (producto.installments) { %>
+                                        <p class="card-item__promo"><%= producto.installments %> CUOTAS SIN INTERÉS</p>
+                                    <% } %>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                <% }); %>
+            </ul>
+            <div class="pagination">
+              <a class="pagination__link" href="#" ><</a>
+              <a class="pagination__link pagination__link--selected" href="#" >1</a>
+              <a class="pagination__link" href="#" >2</a>
+              <a class="pagination__link" href="#" >3</a>
+              <a class="pagination__link" href="#" >4</a>
+              <a class="pagination__link" href="#" >5</a>
+              <a class="pagination__link" href="#" >></a>
+          </div>
+        </section>
+    <% } else { %>
+        <p>No se encontraron productos en la colección.</p>
+    <% } %>
+   
+</main>
+<%- include('../partials/footer') %>

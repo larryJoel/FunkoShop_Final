@@ -284,10 +284,6 @@ header{
    text-transform: uppercase;
  }
 
-/*  .slider__items{
-   display: flex;
-   gap: var(--spacing-24);
- } */
 
  iconify-icon{
          color: var(--dark-bg-solid);
@@ -322,15 +318,15 @@ header{
    animation: fade .7s;
  }
 
- .card-item__img-back{
+ .card-item__img--back{
    display: none;
  }
 
- .card-item__cover:hover .card-item__img-back{
+ .card-item__cover:hover .card-item__img--back{
    display: block;
  }
 
- .card-item__cover:hover .card-item__img-front{
+ .card-item__cover:hover .card-item__img--front{
    display: none;
  }
 
@@ -358,6 +354,38 @@ header{
    font-weight: 700;
  }
 
+ .pagination {
+   display: flex;
+   justify-content: center;
+   gap: var(--spacing-12);
+}
+
+.pagination .pagination__link {
+   display: block;
+   font-size: var(--font-medium);
+   font-weight: 700;
+   border-radius: 4px;
+   padding: var(--spacing-12) var(--spacing-16);
+   border: 2px solid var(--dark-300);
+   transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.pagination .pagination__link:first-of-type,
+.pagination .pagination__link:last-of-type {
+   color: var(--dark-500);
+}
+
+.pagination .pagination__link:hover {
+   background-color: var(--primary-900);
+   color: var(--light-bg-solid);
+   border-color: var(--primary-500);
+}
+
+.pagination .pagination__link--selected {
+   border-color: var(--primary-solid);
+   color: var(--primary-solid);
+}
+
 /*FOOTER*/
 
 .footer{
@@ -383,10 +411,11 @@ header{
  /* PAGINA DETALLE************************/
 /*PAG DETALLE - central Card*/
 .only{
-   display: grid;
+    display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
-    padding: var(--spacing-16) 0;
+    padding: var(--spacing-16) 0; 
+   
 }
 
 .only:nth-child(1) .card-only{

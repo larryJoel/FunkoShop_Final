@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+<section class="hero"> <!--Panel-->
+    <article class="hero__content container">
+      <h3 class="hero__title" >Nuevos Ingresos</h3>
+      <p class="hero__text"> Descubrí el próximo Funko Pop de tu colección</p>
+      <a class="hero__link" href="./all">Shop</a>
+    </article><!-- fin Panel-->
+</section>
+<main class="main-container">
+<!--  ************************************************************************* -->
+ <!-- Bucle para mostrar las colecciones desde la base de datos -->
+ <% if (resultados && resultados.length > 0) { %>
+  <% resultados.forEach((fila) => { %>
+      <section class="collection container"><!-- inicio de section-->
+          <article class="collection__content">
+              <h3 class="collection__title"><%= fila.collection_name %></h3> <!-- Reemplaza "nombre_de_columna" con el nombre real de la columna -->
+              <p class="collection__text"><%= fila.collection_description %></p> <!-- Reemplaza "descripcion_columna" con el nombre real de la columna -->
+              <a class="collection__link" href="/collection/<%= fila.collection_id %>">ver colección..</a>
+          </article>
+          <picture class="collection__cover">
+              <!-- <img src="<%= fila.ruta %>" alt="figura coleccionable Funko"> -->
+              <img src="./img/<%= fila.ruta %>" alt="figura coleccionable Funko">
+          </picture>
+      </section>
+  <% }); %>
+<% } else { %>
+  <p>No se encontraron resultados.</p>
+<% } %>
+<!-- *********************************************************************************** -->
+    <%- include('components/slider') %>
+</main>
+<%- include('partials/footer') %>

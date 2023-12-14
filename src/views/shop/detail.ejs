@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+<main class="main-container">
+    <section class="only container">
+      <% if (productos && productos.length > 0) { %>
+        <% const producto = productos[0]; %>
+        <article class="card-only">
+          <p class="card-only__series"><%= producto.series %></p>
+          <h3 class="card-only__title"><%= producto.product_name %></h3>
+          <p class="card-only__text"><%= producto.product_description %></p>
+          <p class="card-only__price">$ <%= producto.price %></p>
+          <!-- Agrega el resto de tu contenido aquí -->
+          <div class="card-only__content">
+            <div class="card-only__content">
+              <button id="add" class="card-only__content-sum">+</button>
+              <!-- <p class="card-only__content-num">0</p> -->
+              <input class="card-only__content-num" type="text" id="quantity" name="quantity" placeholder="0">
+              <button id="subtract" class="card-only__content-res">-</button>
+            </div>
+              <a class="card-only__content-car" href="">Agregar al Carrito</a>
+          </div>
+          <div class="card-only__content-message">
+            <a class="card-only__content-message-pay" href="#">Ver métodos de pago -</a>
+            <p class="card-only__content-message-tag"> 3 cuotas sin interes</p>
+          </div>
+        </article>
+        <picture class="card-only__cover">
+          <img class="card-only__img" src="../img/<%= producto.image_front %>" alt="<%= producto.product_name %>">
+      </picture>
+      <% } else { %>
+        <p>No se encontró el producto seleccionado.</p>
+      <% } %>
+    </section>
+    
+    <%- include('../components/slider') %>
+  </main>
+<%- include('../partials/footer')%>
