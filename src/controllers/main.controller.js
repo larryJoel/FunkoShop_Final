@@ -21,7 +21,7 @@ const mainControllers = {
                 res.status(500).json({ error: 'Error en la consulta' });
             } else {
               //console.log('Resultados de la consulta:', results);
-                res.render('shop/shop', { productos: results });
+                res.render('./shop/shop', { productos: results });
             }
         });
     },
@@ -34,7 +34,7 @@ const mainControllers = {
           res.status(500).json({ error: 'Error en la consulta' });
         } else {
           //console.log('Resultados de la consulta:', results);
-          res.render('shop/collection', { productos: results });
+          res.render('./shop/collection', { productos: results });
         }
       });
     },
@@ -46,11 +46,11 @@ const mainControllers = {
             res.status(500).json({ error: 'Error en la consulta' });
         } else {
           //console.log('Resultados de la consulta:', results);
-            res.render('shop/detail', { productos: results });
+            res.render('./shop/detail', { productos: results });
         }
     });
     },
-    contact:(req, res)=>res.send('Route for contact view'),
+    contact:(req, res)=>res.render('./admin/contacto'),
     about:(req, res)=>res.send('Route for about view'),
     faqs:(req, res)=>res.send('Route for faqs view')
 }

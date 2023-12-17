@@ -1,0 +1,43 @@
+<%- include('../partials/headerAdm')%>
+<main class="container">
+  <section class="admin_find_content"> <!-- Buscador -->
+    <img class="admin_find_search" src="../../img/icons/search_icon.svg" alt="">
+    <input class="admin_find_input" type="text">
+  </section>
+  <section class="admin_title_content"> <!-- TITULO DEL LISTADO -->
+    <h3 class="admin_title_title">LISTADO DE PRODUCTOS</h3>
+    <div class="admin_title_create">
+      <p class="admin_title_add">AGREGAR</p>
+      <a href="../adm/view">
+        <button class="admin_title_button">+</button>
+      </a>
+    </div>
+  </section>
+  <section class="admin_list_content"> <!-- TABLA DE PRODUCTOS -->
+    <table class="admin_list_table">
+      <tr class="admin_list_head">
+        <th class="admin_list_col_head alch-Id">Id</th>
+        <th class="admin_list_col_head alch-Code">Código</th>
+        <th class="admin_list_col_head alch-Name">Nombre del Producto</th>
+        <th class="admin_list_col_head alch-Category">Categoría</th>
+        <th class="admin_list_col_head alch-actions"></th>
+      </tr>
+      <% productos.forEach((producto) => { %>
+        <tr>
+          <td class="admin_list_col_data"><%= producto.product_id %></td> <!-- Puedes cambiar este valor si hay un id en la base de datos -->
+          <td class="admin_list_col_data"><%= producto.sku %></td>
+          <td class="admin_list_col_data"><%= producto.product_name %></td>
+          <td class="admin_list_col_data"><%= producto.category_id %></td>
+          <td class="admin_list_col_data">
+            <a href="../adm/edit"><img class="ico-accion" src="../../img/icons/edit_pencil.svg" alt=""></a>
+            <a href="#"><img class="ico-accion" src="../../img/icons/delete_trash.svg" alt=""></a>
+          </td>
+        </tr>
+      <% }); %>
+    </table>
+  </section>
+  <% if (productos.length === 0) { %>
+    <p>No se encontraron productos en la colección.</p>
+  <% } %>
+</main>
+<%- include('../partials/footer') %>

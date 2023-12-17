@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+<main class="container login">
+    <section class="login_container">
+        <h1 class="login_title">INGRESA A MI CUENTA</h1>
+        <div class="login_form">
+            <form > <!-- Añadido el atributo action y el método POST -->
+              <div class="login_form-group">
+                <label class="login_form_userLabel" >Nombre:</label>
+                <input class="login_form_userBox" type="text" name="name" placeholder="Agrega un nombre" required> <!-- Añadido el atributo name -->
+              </div>
+              <div class="login_form-group">
+                <label class="login_form_userLabel" >Email:</label>
+                <input class="login_form_userBox" type="email" name="email" placeholder="Agrega un mail" required> <!-- Añadido el atributo name -->
+              </div>
+              <div class="login_form-group">
+                <label class="login_form_passLabel" >Mensasje:</label>
+                <textarea class="login_form_textarea"name="mensaje"></textarea>
+              </div>
+              <button class="login_btnIngresar">Enviar</button>
+              
+              <p class="login_olvideContrasena">Gracias por tus comentarios y consultas</p>
+            </form>
+        </div>
+        
+    </section>
+</main>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,101 @@
+<%- include('../partials/header')%>
+<main class="container">
+    <section class="title-car">
+        <h3 class="title-car_title">CARRITO DE COMPRAS</h3>
+    </section>
+    <section class="detail-car">
+      <div class="car_content">
+        <div class="car_title">DETALLE DEL PRODUCTO</div>
+        <div class="car_title">CANTIDAD</div>
+        <div class="car_title">TOTAL</div>
+      </div>
+      <div class="car_content_article">
+        <div class="car_product _detail">
+          <div class="product_img_content">
+            <div class="img_caja">
+              <img src="../../img/star-wars/baby-yoda-1.webp" alt="">
+            </div>
+            <div class="img_description">
+              <p class="img_desc_name">BABY YODA BLUEBALL</p>
+              <P class="img_desc_origen">STAR WARS</P>
+              <P class="img_desc_price">precio: $1799,99</P>
+            </div>
+          </div>
+        </div>
+        <div class="car_product_cant">
+          <div class="car_prod_num">
+            2
+          </div>
+          <div class="car_prod_botons">
+            <button class="botons">+</button>
+            <button class="botons">-</button>
+          </div>
+        </div>
+        <div class="car_product_total">
+          <div class="prod_total_monto">$ 3599,98</div>
+        </div>
+        <div class="prod_total_cerrar">
+          <iconify-icon icon="typcn:delete-outline"></iconify-icon>
+        </div>
+      </div>
+      <div class="car_content_article">
+        <div class="car_product _detail">
+          <div class="product_img_content">
+            <div class="img_caja">
+              <img src="../../img/pokemon/pidgeotto-1.webp" alt="">
+            </div>
+            <div class="img_description">
+              <p class="img_desc_name">PIDGEOTTO</p>
+              <P class="img_desc_origen">POKEMON</P>
+              <P class="img_desc_price">precio: $1799,99</P>
+            </div>
+          </div>
+        </div>
+        <div class="car_product_cant">
+          <div class="car_prod_num">
+            1
+          </div>
+          <div class="car_prod_botons">
+            <button class="botons">+</button>
+            <button class="botons">-</button>
+          </div>
+        </div>
+        <div class="car_product_total">
+          <div class="prod_total_monto">$ 1799,98</div>
+        </div>
+        <div class="prod_total_cerrar">
+          <iconify-icon icon="typcn:delete-outline"></iconify-icon>
+        </div>
+      </div>
+    </section>
+    <section class="section_resumen">
+      <!-- CUADRO Resumen -->
+      <div class="resumen_content">
+        <h2 class="resumen_title">RESUMEN</h2>
+      </div>
+      <form action="">
+        <div class="tabla_content">
+          <table class="tabla_resumen">
+            <tr class="tabla_tr">
+              <td class="tabla_td negrita">CANTIDAD DE ELEMENTOS</td>
+              <td class="tabla_td valor">3</td>
+            </tr>
+            <tr  class="tabla_tr">
+              <td class="tabla_td negrita">SUBTOTAL</td>
+              <td class="tabla_td valor">$5.399,97</td>
+            </tr>
+            <tr  class="tabla_tr">
+              <td class="tabla_td negrita linea">ENVIO</td>
+              <td class="tabla_td valor linea">$0,00</td>
+            </tr>
+            <tr  class="tabla_tr">
+              <td class="tabla_td negrita">TOTAL</td>
+              <td class="tabla_td valor">$5.399,97</td>
+            </tr>
+          </table>
+          <button class="resumen_btn">IR A PAGAR</button>
+        </div>
+      </form>
+    </section>
+  </main>
+<%- include('../partials/footer') %>

@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+<main class="container login">
+    <section class="login_container">
+        <h1 class="login_title">INGRESA A MI CUENTA</h1>
+        <div class="login_form">
+            <form action="/auth/login" method="POST"> <!-- Añadido el atributo action y el método POST -->
+              <div class="login_form-group">
+                <label class="login_form_userLabel" >Email:</label>
+                <input class="login_form_userBox" type="email" name="email" placeholder="Agrega un mail" required> <!-- Añadido el atributo name -->
+              </div>
+              <div class="login_form-group">
+                <label class="login_form_passLabel" >Contraseña:</label>
+                <input class="login_form_passBox" type="password" name="password" placeholder="***" required> <!-- Añadido el atributo name -->
+              </div>
+              <button class="login_btnIngresar">Ingresar</button>
+              
+              <input class="login_check" type="checkbox" >
+              <label class="login_checkTitle" >Recordarme</label>
+          
+              <p class="login_olvideContrasena">Olvidé mi contraseña</p>
+            </form>
+        </div>
+        <% if (typeof errorMessage !== 'undefined' && errorMessage) { %>
+            <p class="error-message"><%= errorMessage %></p>
+         <% } %>
+    </section>
+</main>
+
+<%- include('../partials/footer') %>
